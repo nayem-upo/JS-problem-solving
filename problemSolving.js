@@ -56,38 +56,6 @@ console.log(findFrequentElement([3, 5, 2, 5, 3, 3, 1, 4, 5])) // Output: 3
 
 
 
-// Problem 4: Create a function that takes a sorted array of numbers and a target
-// value as input.The function should find two numbers in the array that add up to
-// the target value.Return an array containing the indices of the two numbers.
-
-function findTwoNumbersWithSum(array, target) {
-    let left = 0;
-    let right = array.length - 1;
-
-    while (left < right) {
-        const sum = array[left] + array[right];
-
-        if (sum === target) {
-            return [left, right];
-        } else if (sum < target) {
-            left++;
-        } else {
-            right--;
-        }
-    }
-
-    return [];
-}
-const inputArray = [1, 3, 6, 8, 11, 15];
-const targetValue = 9;
-
-const result = findTwoNumbersWithSum([1, 3, 6, 8, 11, 15], 9);
-console.log(`[${result[0]}] ${inputArray[result[0]]} + [${result[1]}] ${inputArray[result[1]]} = ${targetValue}`);
-// Output: [0] 1 + [3] 8 = 9
-
-
-
-
 // Problem 5: Implement a simple JavaScript calculator.The calculator should take
 // two numbers and an operator(+, -, *, /) as input and return the result of the operation.
 
